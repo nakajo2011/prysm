@@ -541,7 +541,7 @@ func TestForkChoice_computeProposerBoostScore(t *testing.T) {
 		// Avg balance is 10, and the number of validators is 64.
 		// With a committee size of num validators (64) / slots per epoch (32) == 2.
 		// we then have a committee weight of avg balance * committee size = 10 * 2 = 20.
-		// The score then becomes 10 * PROPOSER_SCORE_BOOST // 100, which is
+		// The score then becomes 20 * PROPOSER_SCORE_BOOST // 100, which is
 		// 20 * 40 / 100 = 8.
 		score, err := computeProposerBoostScore(validatorBalances)
 		require.NoError(t, err)
